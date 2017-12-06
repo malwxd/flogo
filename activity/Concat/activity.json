@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "type": "flogo:activity",
   "description": "activity description",
-  "ref": "github.com/malwxd/flogo/activity/Concat/",
+  "ref": "github.com/malwxd/flogo/activity/Concat",
   "author": "Your Name <you.name@example.org>",
   "inputs":[
     {
