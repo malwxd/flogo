@@ -1,9 +1,9 @@
 package watcher
 
 import (
-	"time"	
 	"github.com/TIBCOSoftware/flogo-lib/core/activity"
         "github.com/TIBCOSoftware/flogo-lib/logger"
+	"time"
 )
 
 // MyActivity is a stub for your Activity implementation
