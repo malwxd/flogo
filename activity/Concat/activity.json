@@ -2,9 +2,9 @@
   "name": "Concat",
   "version": "0.0.1",
   "type": "flogo:activity",
-  "description": "activity description",
+  "description": "Concatenates two strings",
   "ref": "github.com/malwxd/flogo/activity/Concat",
-  "author": "Your Name <you.name@example.org>",
+  "author": "Paulina Uhman <you.name@example.org>",
   "inputs":[
     {
       "name": "First",
