@@ -14,7 +14,7 @@
   "outputs": [
     {
       "name": "result",
-      "type": "bool"
+      "type": "string"
     }
   ]
 }
