@@ -1,0 +1,19 @@
+{
+  "name": "watcher",
+  "version": "0.0.1",
+  "type": "flogo:activity",
+  "description": "activity description",
+  "author": "Your Name <you.name@example.org>",
+  "inputs":[
+    {
+      "name": "name",
+      "type": "string"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "bool"
+    }
+  ]
+}
