@@ -51,5 +51,5 @@ func TestEval(t *testing.T) {
 	tc.SetInput("name", "Malwa")	
 	act.Eval(tc)
 	result := tc.GetOutput("result")
-	assert.Equal(t, result, true)
+	assert.Equal(t, result, "true")
 }
