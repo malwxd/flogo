@@ -4,6 +4,7 @@ import (
 	"github.com/TIBCOSoftware/flogo-lib/core/activity"
         "github.com/TIBCOSoftware/flogo-lib/logger"
 	"time"
+	"strconv"
 )
 
 // MyActivity is a stub for your Activity implementation
@@ -31,6 +32,7 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
         onTime := time.Date(cTime.Year(), cTime.Month(), cTime.Day(), 10, 30, 00, 000000000, time.UTC)
         // logger.Debugf("Now is: [%s]", onTime) 	
         late := cTime.After(onTime)
-        context.SetOutput("result", late)
+        str := strconv.FormatBool(late)
+        context.SetOutput("result", str)
 	return true, nil
 }
