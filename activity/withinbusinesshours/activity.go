@@ -41,11 +41,11 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
         log.Println("Now the time is: ", time.Now().Local())
 	//Get current local time        
 	cTime := time.Now().Local()
-	zone, ok := time.LoadLocation("Local")  
+	zone, err := time.LoadLocation("Local")  
 
-	if !ok {
+	if err != nil {
 		log.Println("Wrong zone")
-		panic(ok)}
+		panic(err)}
 
 	
 
