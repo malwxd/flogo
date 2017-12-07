@@ -43,7 +43,7 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 	cTime := time.Now().Local()
 	zone, ok := time.LoadLocation("Local")  
 
-	if ok!=nil {
+	if !ok {
 		log.Println("Wrong zone")
 		panic(ok)}
 
