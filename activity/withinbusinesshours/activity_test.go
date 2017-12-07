@@ -47,7 +47,10 @@ func TestEval(t *testing.T) {
 
 	act := NewActivity(getActivityMetadata())
 	tc := test.NewTestActivityContext(getActivityMetadata())
-
+	tc.SetInput("initialhour", 10)
+	tc.SetInput("initialminute", 30)
+	tc.SetInput("finalminute", 00)	
+	tc.SetInput("finalhour", 20)
 	//setup attrs
 
 	act.Eval(tc)

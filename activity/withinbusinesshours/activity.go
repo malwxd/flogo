@@ -34,8 +34,14 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 		log.Println("Wrong zone")
 		panic(ok)}
 
-        startTime := time.Date(cTime.Year(), cTime.Month(), cTime.Day(), 7, 00, 00, 000000000, zone)
-        endTime := time.Date(cTime.Year(), cTime.Month(), cTime.Day(), 20, 00, 00, 000000000, zone)
+	initialhour := context.GetInput("initialhour").(int)
+	initialminute := context.GetInput("initialminute").(int)
+	finalhour := context.GetInput("finalhour").(int)
+	finalminute := context.GetInput("finalminute").(int)
+
+        startTime := time.Date(cTime.Year(), cTime.Month(), cTime.Day(), initialhour, initialminute, 00, 000000000, zone)
+        endTime := time.Date(cTime.Year(), cTime.Month(), cTime.Day(), finalhour, finalminute, 00, 000000000, zone)
+
 	log.Println("The business hours are between: ",startTime)
 	log.Println("and ", endTime)
 

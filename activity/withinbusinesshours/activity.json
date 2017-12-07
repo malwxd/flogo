@@ -6,6 +6,22 @@
   "ref": "github.com/malwxd/flogo/activity/withinbusinesshours",
   "author": "Paulina Uhman <you.name@example.org>",
   "inputs":[
+	{
+	  "name" : "initialhour",
+	  "type" : "int"
+	},
+	{
+	  "name" : "initialminute",
+	  "type" : "int"
+	},
+	{
+	  "name" : "finalhour",
+	  "type" : "int"
+	},
+	{
+	  "name" : "finalminute",
+	  "type" : "int"
+	}
     
   ],
   "outputs": [
