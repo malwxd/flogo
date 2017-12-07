@@ -24,6 +24,11 @@ func (a *MyActivity) Metadata() *activity.Metadata {
 // Eval implements activity.Activity.Eval
 func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 
+	initialhour := context.GetInput("initialhour").(int)
+	initialminute := context.GetInput("initialminute").(int)
+	finalhour := context.GetInput("finalhour").(int)
+	finalminute := context.GetInput("finalminute").(int)
+	
 	// do eval
         log.Println("Now the time is: ", time.Now().Local())
 	//Get current local time        
@@ -34,10 +39,7 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 		log.Println("Wrong zone")
 		panic(ok)}
 
-	initialhour := context.GetInput("initialhour").(int)
-	initialminute := context.GetInput("initialminute").(int)
-	finalhour := context.GetInput("finalhour").(int)
-	finalminute := context.GetInput("finalminute").(int)
+	
 
         startTime := time.Date(cTime.Year(), cTime.Month(), cTime.Day(), initialhour, initialminute, 00, 000000000, zone)
         endTime := time.Date(cTime.Year(), cTime.Month(), cTime.Day(), finalhour, finalminute, 00, 000000000, zone)
