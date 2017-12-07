@@ -8,22 +8,22 @@
   "inputs":[
 	{
 	  "name" : "initialhour",
-	  "type" : "int",
+	  "type" : "integer",
 	  "required" : true
 	},
 	{
 	  "name" : "initialminute",
-	  "type" : "int",
+	  "type" : "integer",
 	  "required" : true
 	},
 	{
 	  "name" : "finalhour",
-	  "type" : "int",
+	  "type" : "integer",
 	  "required" : true
 	},
 	{
 	  "name" : "finalminute",
-	  "type" : "int",
+	  "type" : "integer",
 	  "required" : true
 	}    
   ],
