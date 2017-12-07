@@ -1,0 +1,21 @@
+{
+  "name": "withinbusinesshours",
+  "version": "0.0.1",
+  "type": "flogo:activity",
+  "description": "activity description",
+  "ref": "github.com/malwxd/flogo/activity/withinbusinesshours",
+  "author": "Paulina Uhman <you.name@example.org>",
+  "inputs":[
+    
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "string"
+    },
+    {
+      "name": "currentTime",
+      "type": "string"
+    }	
+  ]
+}
