@@ -2,7 +2,7 @@ package watcher
 
 import (
 	"github.com/TIBCOSoftware/flogo-lib/core/activity"
-        "github.com/TIBCOSoftware/flogo-lib/logger"
+        "log"
 	"time"
 	"strconv"
 )
@@ -26,7 +26,7 @@ func (a *MyActivity) Metadata() *activity.Metadata {
 func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 
 	name := context.GetInput("name").(string)
-        logger.Println("Hi ", name)
+        log.Println("Hi ", name)
         cTime := time.Now().Local()
 
 	zone, ok := time.LoadLocation("Local")  
