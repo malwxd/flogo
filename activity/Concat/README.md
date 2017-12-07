@@ -1,1 +1,1 @@
-test
+Just concatenates two string.
