@@ -24,10 +24,18 @@ func (a *MyActivity) Metadata() *activity.Metadata {
 // Eval implements activity.Activity.Eval
 func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 
-	initialhour := context.GetInput("initialhour").(int)
-	initialminute := context.GetInput("initialminute").(int)
-	finalhour := context.GetInput("finalhour").(int)
-	finalminute := context.GetInput("finalminute").(int)
+	initialhour, ok := context.GetInput("initialhour").(int)
+	if !ok {
+		panic(ok)}
+	initialminute, ok := context.GetInput("initialminute").(int)
+	if !ok {
+		panic(ok)}
+	finalhour, ok := context.GetInput("finalhour").(int)
+	if !ok {
+		panic(ok)}
+	finalminute, ok := context.GetInput("finalminute").(int)
+	if !ok {
+		panic(ok)}
 	
 	// do eval
         log.Println("Now the time is: ", time.Now().Local())
