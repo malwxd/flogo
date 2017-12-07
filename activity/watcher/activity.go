@@ -26,11 +26,15 @@ func (a *MyActivity) Metadata() *activity.Metadata {
 func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 
 	name := context.GetInput("name").(string)
-        logger.Debugf("Hi [%s]", name)
-        cTime := time.Now()  
-        // logger.Debugf("Now is: [%s]", cTime)
-        onTime := time.Date(cTime.Year(), cTime.Month(), cTime.Day(), 10, 30, 00, 000000000, time.UTC)
-        // logger.Debugf("Now is: [%s]", onTime) 	
+        logger.Println("Hi ", name)
+        cTime := time.Now().Local()
+
+	zone, ok := time.LoadLocation("Local")  
+	if ok!=nil {
+		log.Println("Wrong zone")
+		panic(ok)} 
+ 
+        onTime := time.Date(cTime.Year(), cTime.Month(), cTime.Day(), 10, 30, 00, 000000000, zone)
         late := cTime.After(onTime)
         str := strconv.FormatBool(late)
         context.SetOutput("result", str)
